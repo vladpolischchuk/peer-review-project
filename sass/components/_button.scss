@@ -13,18 +13,23 @@
   color: var(--white_cl);
   background-color: var(--accent_cl);
 
-  border: none;
+  border: transparent;
   border-radius: 100px;
   box-shadow: 4px 10px 12px rgba(0, 243, 141, 0.32);
 
   cursor: pointer;
-  transition: background-color $anim-two;
+  transition: background-color $anim-slow, color $anim-slow, border $anim-one;
   outline: transparent;
 
   // анімація (розділ герой)
   &:hover,
   &:focus {
-    background-color: var(--accent_hover_cl);
-    // animation: animate_pulse 1.5s infinite;
+    background-color: transparent;
+    border: 1px solid var(--accent_cl);
+    color: var(--accent_hover_cl);
   }
+}
+
+.btn--animation-hero {
+  animation: animate_grow 2s infinite;
 }

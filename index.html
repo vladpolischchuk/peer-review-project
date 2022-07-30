@@ -7,22 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peer review project</title>
 
-  <!-- ------------------------------- Шрифти -------------------------------- -->
+  <!-- Шрифти -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
 
-  <!-- ----------------------------- Нормалізація ----------------------------- -->
+  <!-- Нормалізація -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
 
-  <!-- --------------------------- Загальні стилі ---------------------------- -->
+  <!-- Загальні стилі -->
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body class="page-body">
 
-  <!-- ----------------------------- Шапка сайту ----------------------------- -->
+  <!-- Шапка сайту -->
   <header class="site-header" id="header" data-header>
     <div class="container site-header__container">
 
@@ -38,19 +38,19 @@
 
         <ul class="main-nav__list list">
           <li class="main-nav__item">
-            <a class="main-nav__link  link main-nav__link--active" href="">Головна</a>
+            <a class="main-nav__link main-nav__link--header-mode main-nav__link--active link" href="">Головна</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link  link" href="">Рецензування</a>
+            <a class="main-nav__link main-nav__link--header-mode  link" href="">Рецензування</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link  link" href="">Зворотній зв’язок</a>
+            <a class="main-nav__link main-nav__link--header-mode  link" href="">Зворотній зв’язок</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link  link" href="">Про проект</a>
+            <a class="main-nav__link main-nav__link--header-mode  link" href="">Про проект</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link  link" href="">Політика конфіденційності</a>
+            <a class="main-nav__link main-nav__link--header-mode  link" href="">Політика конфіденційності</a>
           </li>
         </ul>
       </nav>
@@ -80,7 +80,7 @@
     </div>
   </header>
 
-  <!-- ----------------------- Унікальний вміст сайту ------------------------ -->
+  <!-- Унікальний вміст сайту -->
   <main>
 
     <!-- Розділ герой -->
@@ -98,17 +98,115 @@
             Надсилайте вашу роботу на рецензування!
           </p>
 
-          <button class="btn btn--anim-pulse" type="submit">Надіслати</button>
+          <button class="btn btn--animation-hero bubbly-button" type="submit">Надіслати</button>
         </div>
+      </div>
+    </section>
+
+    <!-- Розділ переваг -->
+    <section class="benefits">
+      <div class="container">
+
+        <h2 class="section-title">Наші переваги</h2>
+
+        <!-- Список переваг -->
+        <ul class="benefits-list list">
+
+          <li class="benefits-list__item">
+            <h3 class="benefits-list__title">Lorem ipsum dolor</h3>
+            <div class="benefits-list__group">
+              <svg class="benefits-list__icon" width="70" height="70">
+                <use href=".//images/sprits/sprit.svg#icon-data-transfer"></use>
+              </svg>
+              <p class="benefits-list__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Elit pellentesque habitan
+              </p>
+            </div>
+          </li>
+
+          <li class="benefits-list__item">
+            <h3 class="benefits-list__title">Lorem ipsum dolor</h3>
+            <div class="benefits-list__group">
+              <svg class="benefits-list__icon" width="70" height="70">
+                <use href=".//images/sprits/sprit.svg#icon-solution"></use>
+              </svg>
+              <p class="benefits-list__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Elit pellentesque habitan
+              </p>
+            </div>
+          </li>
+
+          <li class="benefits-list__item">
+            <h3 class="benefits-list__title">Lorem ipsum dolor</h3>
+            <div class="benefits-list__group">
+              <svg class="benefits-list__icon" width="70" height="70">
+                <use href=".//images/sprits/sprit.svg#icon-balance"></use>
+              </svg>
+              <p class="benefits-list__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Elit pellentesque habitan
+              </p>
+            </div>
+          </li>
+
+          <li class="benefits-list__item">
+            <h3 class="benefits-list__title">Lorem ipsum dolor</h3>
+            <div class="benefits-list__group">
+              <svg class="benefits-list__icon" width="70" height="70">
+                <use href=".//images/sprits/sprit.svg#icon-price"></use>
+              </svg>
+              <p class="benefits-list__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Elit pellentesque habitan
+              </p>
+            </div>
+          </li>
+
+          <li class="benefits-list__item">
+            <h3 class="benefits-list__title">Lorem ipsum dolor</h3>
+            <div class="benefits-list__group">
+              <svg class="benefits-list__icon" width="70" height="70">
+                <use href=".//images/sprits/sprit.svg#icon-people"></use>
+              </svg>
+              <p class="benefits-list__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Elit pellentesque habitan
+              </p>
+            </div>
+          </li>
+
+          <li class="benefits-list__item">
+            <h3 class="benefits-list__title">Lorem ipsum dolor</h3>
+            <div class="benefits-list__group">
+              <svg class="benefits-list__icon" width="70" height="70">
+                <use href=".//images/sprits/sprit.svg#icon-calendar"></use>
+              </svg>
+              <p class="benefits-list__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Elit pellentesque habitan
+              </p>
+            </div>
+          </li>
+
+
+        </ul>
       </div>
     </section>
   </main>
 
-  <!-- ----------------------- Заключна частина сайту ------------------------ -->
+  <!-- Заключна чатсина сайту -->
   <footer class="site-footer">
     <div class="container">
 
-      <div class="footer__group">
+      <div class="site-footer__group">
         <!-- Логотип -->
         <a class="logo-link link" href="./index.html" rel="noopener noreferrer" aria-label="Логотип">
           <svg width="168" height="42">
@@ -121,25 +219,25 @@
 
           <ul class="main-nav__list list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--light-mode link" href="">Головна</a>
+              <a class="main-nav__link main-nav__link--footer-mode link" href="">Головна</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--light-mode link" href="">Рецензування</a>
+              <a class="main-nav__link main-nav__link--footer-mode link" href="">Рецензування</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--light-mode link" href="">Зворотній зв’язок</a>
+              <a class="main-nav__link main-nav__link--footer-mode link" href="">Зворотній зв’язок</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--light-mode link" href="">Про проект</a>
+              <a class="main-nav__link main-nav__link--footer-mode link" href="">Про проект</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--light-mode link" href="">Політика конфіденційності</a>
+              <a class="main-nav__link main-nav__link--footer-mode link" href="">Політика конфіденційності</a>
             </li>
           </ul>
         </nav>
 
         <!-- Номер телефону -->
-        <div class="footer__wrapper">
+        <div class="site-footer__wrapper">
           <a class="contact-link link" href="tel:+380999999999" target="_blank" rel="noopener noreferrer"
             aria-label="Номер телефону">
             + 38 (099) 999 99 99
@@ -147,13 +245,14 @@
         </div>
       </div>
 
-      <p class="footer__desc">2021 &#169 All rights reserved</p>
+      <p class="site-footer__desc">2021 &#169; All rights reserved</p>
 
     </div>
   </footer>
 
-  <!-- ------------------------------- Скрипти ------------------------------- -->
+  <!-- Скрипти -->
   <script src="./js/header-scroll.js"></script>
+  <script src="./js/animation-btn.js"></script>
 
 </body>
 

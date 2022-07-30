@@ -13,7 +13,6 @@
 
 .main-nav__link {
   display: block;
-  @include padding(42px, 0, 56px, 0);
 
   font-size: 14px;
   line-height: 1.14;
@@ -22,11 +21,6 @@
   color: inherit;
 
   transition: color $anim-two;
-
-  // на темному фоні
-  &--light-mode {
-    color: var(--white_cl);
-  }
 
   // лінія
   &::before {
@@ -43,6 +37,10 @@
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
   }
+}
+
+.main-nav__link--header-mode {
+  @include padding(42px, 0, 56px, 0);
 
   // ховер та фокус
   &:hover::before,
@@ -50,6 +48,16 @@
     width: 100%;
 
     transform: translateX(-50%);
+  }
+}
+
+.main-nav__link--footer-mode {
+  color: var(--white_cl);
+
+  // ховер та фокус
+  &:hover,
+  &:focus {
+    color: var(--accent_cl);
   }
 }
 

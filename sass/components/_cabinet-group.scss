@@ -17,8 +17,15 @@
   letter-spacing: 0.05em;
 
   color: var(--white_cl);
+
+  transition: color $anim-one;
 }
 
+.site-header.js-no-transparency {
+  .cabinet-group__desc {
+    color: var(--black_cl);
+  }
+}
 .cabinet-group__link {
   transition: opacity $anim-two;
 

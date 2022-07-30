@@ -6,6 +6,7 @@
   --white_cl: #ffffff;
   --black_cl: #000000;
   --main_bg_cl: #113d2c;
+  --gray_bg_cl: #f5f4fa;
   --accent_cl: #28df99;
   --accent_hover_cl: #20c988;
   --status_error: #ff8282;
@@ -17,12 +18,19 @@
 /* ------------------ Вирахунок розмірів елментів для сітки ----------------- */
 /* -------------------------------- Марджіни -------------------------------- */
 /* -------------------------------- Паддінги -------------------------------- */
+/* --------------------------- Падінги для секцій --------------------------- */
+.benefits {
+  padding-top: 120px;
+  padding-right: 0;
+  padding-bottom: 120px;
+  padding-left: 0;
+}
+
 /* ---------------------------------- Base ---------------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                           Скидання деяких стилів                           */
 /* -------------------------------------------------------------------------- */
 .page-body {
-  height: 5000px;
   font-family: "Roboto", sans-serif;
   color: var(--black_cl);
 }
@@ -63,33 +71,33 @@
   width: 1230px;
 }
 
-@-webkit-keyframes animate_pulse {
+@-webkit-keyframes animate_grow {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(40, 223, 153, 0.4);
-            box-shadow: 0 0 0 0 rgba(40, 223, 153, 0.4);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
-  70% {
-    -webkit-box-shadow: 0 0 0 20px rgba(40, 223, 153, 0);
-            box-shadow: 0 0 0 20px rgba(40, 223, 153, 0);
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(228, 25, 49, 0);
-            box-shadow: 0 0 0 0 rgba(228, 25, 49, 0);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
 }
 
-@keyframes animate_pulse {
+@keyframes animate_grow {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(40, 223, 153, 0.4);
-            box-shadow: 0 0 0 0 rgba(40, 223, 153, 0.4);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
-  70% {
-    -webkit-box-shadow: 0 0 0 20px rgba(40, 223, 153, 0);
-            box-shadow: 0 0 0 20px rgba(40, 223, 153, 0);
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(228, 25, 49, 0);
-            box-shadow: 0 0 0 0 rgba(228, 25, 49, 0);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
 }
 /* ------------------------------- Components ------------------------------- */
@@ -112,19 +120,12 @@
 
 .main-nav__link {
   display: block;
-  padding-top: 42px;
-  padding-right: 0;
-  padding-bottom: 56px;
-  padding-left: 0;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   color: inherit;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-nav__link--light-mode {
-  color: var(--white_cl);
 }
 .main-nav__link::before {
   content: "";
@@ -139,10 +140,24 @@
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
-.main-nav__link:hover::before, .main-nav__link:focus::before {
+
+.main-nav__link--header-mode {
+  padding-top: 42px;
+  padding-right: 0;
+  padding-bottom: 56px;
+  padding-left: 0;
+}
+.main-nav__link--header-mode:hover::before, .main-nav__link--header-mode:focus::before {
   width: 100%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.main-nav__link--footer-mode {
+  color: var(--white_cl);
+}
+.main-nav__link--footer-mode:hover, .main-nav__link--footer-mode:focus {
+  color: var(--accent_cl);
 }
 
 .main-nav__link--active::before {
@@ -179,6 +194,12 @@
   line-height: 1.66;
   letter-spacing: 0.05em;
   color: var(--white_cl);
+  -webkit-transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-header.js-no-transparency .cabinet-group__desc {
+  color: var(--black_cl);
 }
 
 .cabinet-group__link {
@@ -203,17 +224,91 @@
   line-height: 1.2;
   color: var(--white_cl);
   background-color: var(--accent_cl);
-  border: none;
+  border: transparent;
   border-radius: 100px;
   -webkit-box-shadow: 4px 10px 12px rgba(0, 243, 141, 0.32);
           box-shadow: 4px 10px 12px rgba(0, 243, 141, 0.32);
   cursor: pointer;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 600ms ease-in-out, color 600ms ease-in-out, border 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 600ms ease-in-out, color 600ms ease-in-out, border 350ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
 }
 .btn:hover, .btn:focus {
-  background-color: var(--accent_hover_cl);
+  background-color: transparent;
+  border: 1px solid var(--accent_cl);
+  color: var(--accent_hover_cl);
+}
+
+.btn--animation-hero {
+  -webkit-animation: animate_grow 2s infinite;
+          animation: animate_grow 2s infinite;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Зоголовок секцій                              */
+/* -------------------------------------------------------------------------- */
+.section-title {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 50px;
+  margin-left: 0;
+  font-size: 27px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Список переваг                               */
+/* -------------------------------------------------------------------------- */
+.benefits-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+.benefits-list__item {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.15);
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.15);
+  border-radius: 10px;
+}
+
+.benefits-list__title {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+  margin-left: 0;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}
+
+.benefits-list__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.benefits-list__icon {
+  fill: var(--accent_cl);
+}
+
+.benefits-list__desc {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  max-width: 270px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
 }
 
 /* --------------------------------- Layouts -------------------------------- */
@@ -233,6 +328,7 @@
   transition: background-color 600ms ease-in-out, backdrop-filter 600ms ease-in-out, box-shadow 600ms ease-in-out, -webkit-backdrop-filter 600ms ease-in-out, -webkit-box-shadow 600ms ease-in-out;
 }
 .site-header.js-no-transparency {
+  background-image: linear-gradient(109.24deg, rgba(232, 247, 154, 0.5) 2.67%, rgba(232, 247, 154, 0.226562) 60.71%, rgba(232, 247, 154, 0.5) 108.8%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   -webkit-box-shadow: 0 4px 10px rgba(25, 28, 38, 0.4);
@@ -322,7 +418,7 @@
   background-color: var(--main_bg_cl);
 }
 
-.footer__group {
+.site-footer__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,9 +427,13 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 45px;
+  margin-left: 0;
 }
 
-.footer__main-nav {
+.site-footer__main-nav {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -341,7 +441,7 @@
 }
 
 /* ----------------------------- Номер телефону ----------------------------- */
-.footer__wrapper {
+.site-footer__wrapper {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -349,26 +449,26 @@
 }
 
 .contact-link {
-  display: block;
-  padding-top: 42px;
-  padding-right: 0;
-  padding-bottom: 56px;
-  padding-left: 0;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--white_cl);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-link:hover, .contact-link:focus {
+  color: var(--accent_cl);
 }
 
 /* ------------------------------- Копирайтер ------------------------------- */
-.footer__desc {
-  margin-top: 11px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
+.site-footer__desc {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.05em;
   text-align: center;
   color: var(--white_cl);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Розділ переваги                              */
+/* -------------------------------------------------------------------------- *//*# sourceMappingURL=main.css.map */
