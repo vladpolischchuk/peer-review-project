@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------- */
+/*                                Розділ герой                                */
+/* -------------------------------------------------------------------------- */
+.hero {
+  @include padding(242px, 0, 253px, 0);
+
+  // фонові зображення
+  background-image: url(../images/hero/bg-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Фонове зображення для retina-екранів
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hero/bg-hero@2x.jpg);
+  }
+}
+
+/* ---------------------------------- Оффер --------------------------------- */
+.offer-group__title {
+  @include margin(0, 0, 25px, 0);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+}
+
+.offer-group__desc {
+  @include margin(0, 0, 30px, 0);
+
+  max-width: 429px;
+
+  font-size: 16px;
+  line-height: 1.18;
+}

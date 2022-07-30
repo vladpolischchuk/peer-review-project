@@ -1,0 +1,25 @@
+/* -------------------------------------------------------------------------- */
+/*                           Скидання деяких стилів                           */
+/* -------------------------------------------------------------------------- */
+.page-body {
+  height: 5000px;
+
+  font-family: $main-font;
+  color: var(--black_cl);
+}
+
+.list {
+  @include margin(0, 0, 0, 0);
+  @include padding(0, 0, 0, 0);
+
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}

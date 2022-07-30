@@ -1,0 +1,46 @@
+/* -------------------------------------------------------------------------- */
+/*                           Заключна частина сайту                           */
+/* -------------------------------------------------------------------------- */
+.site-footer {
+  @include padding(50px, 0, 33px, 0);
+
+  background-color: var(--main_bg_cl);
+}
+
+.footer__group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__main-nav {
+  @include margin(0, 0, 0, 40px);
+}
+
+/* ----------------------------- Номер телефону ----------------------------- */
+.footer__wrapper {
+  @include margin(0, 0, 0, 60px);
+}
+
+.contact-link {
+  display: block;
+  @include padding(42px, 0, 56px, 0);
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  color: var(--white_cl);
+}
+
+/* ------------------------------- Копирайтер ------------------------------- */
+.footer__desc {
+  @include margin(11px, 0, 0, 0);
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  color: var(--white_cl);
+}

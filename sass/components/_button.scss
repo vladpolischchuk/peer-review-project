@@ -1,0 +1,30 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Кнопка                                   */
+/* -------------------------------------------------------------------------- */
+.btn {
+  @include padding(21px, 0, 21px, 0);
+
+  min-width: 225px;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+
+  color: var(--white_cl);
+  background-color: var(--accent_cl);
+
+  border: none;
+  border-radius: 100px;
+  box-shadow: 4px 10px 12px rgba(0, 243, 141, 0.32);
+
+  cursor: pointer;
+  transition: background-color $anim-two;
+  outline: transparent;
+
+  // анімація (розділ герой)
+  &:hover,
+  &:focus {
+    background-color: var(--accent_hover_cl);
+    // animation: animate_pulse 1.5s infinite;
+  }
+}

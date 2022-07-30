@@ -1,0 +1,30 @@
+/* -------------------------------------------------------------------------- */
+/*                              Особистий кабінет                             */
+/* -------------------------------------------------------------------------- */
+.cabinet-group__list {
+  display: flex;
+}
+
+.cabinet-group__item:nth-child(2) {
+  @include margin(0, 0, 0, 11px);
+}
+
+.cabinet-group__desc {
+  @include margin(5px, 0, 0, 0);
+
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.05em;
+
+  color: var(--white_cl);
+}
+
+.cabinet-group__link {
+  transition: opacity $anim-two;
+
+  // ховер та фокус
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
