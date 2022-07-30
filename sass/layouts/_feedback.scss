@@ -1,0 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/*                           Розді зворотній зв’язок                          */
+/* -------------------------------------------------------------------------- */
+.section-feedback {
+  @include padding(150px, 0, 120px, 0);
+
+  // фонові зображення
+  background-image: url(../images/feedback/wave.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// Фонове зображення для retina-екранів
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-feedback {
+    background-image: url(../images/feedback/wave@2x.jpg);
+  }
+}
+
+.section-feedback__form-feedback {
+  @include margin(0, auto, 0, auto);
+}

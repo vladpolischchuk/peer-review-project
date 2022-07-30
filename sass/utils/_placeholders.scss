@@ -2,3 +2,10 @@
 %section-padding {
   @include padding(120px, 0, 120px, 0);
 }
+
+/* --------------------------- Заголовок для форм --------------------------- */
+%form-title {
+  @include margin(0, 0, 50px, 0);
+  font-size: 20px;
+  line-height: 1.2;
+}

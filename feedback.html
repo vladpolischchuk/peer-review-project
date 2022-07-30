@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peer review project</title>
+
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Нормалізація -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+
+    <!-- Загальні стилі -->
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body class="page-body">
+
+    <!-- Шапка сайту -->
+    <header class="site-header" id="header" data-header>
+        <div class="container site-header__container">
+
+            <!-- Логотип -->
+            <a class="logo-link link" href="./index.html" rel="noopener noreferrer" aria-label="Логотип">
+                <svg width="168" height="42">
+                    <use href="./images/sprits/sprit.svg#icon-logo"></use>
+                </svg>
+            </a>
+
+            <!-- Навігація по сайту -->
+            <nav class="main-nav site-header__main-nav">
+
+                <ul class="main-nav__list list">
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--header-mode link" href="./index.html">Головна</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--header-mode  link" href="">Рецензування</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--header-mode main-nav__link--active  link"
+                            href="./feedback.html">Зворотній
+                            зв’язок</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--header-mode  link" href="">Про проект</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--header-mode  link" href="">Політика
+                            конфіденційності</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Особистий кабінет -->
+            <div class="cabinet-group site-header__cabinet-group">
+
+                <ul class="cabinet-group__list list">
+                    <li class="cabinet-group__item">
+                        <a class="cabinet-group__link link" href="">
+                            <svg width="36" height="36">
+                                <use href="./images/sprits/sprit.svg#icon-bell-sms"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="cabinet-group__item">
+                        <a class="cabinet-group__link link" href="">
+                            <svg width="36" height="36">
+                                <use href="./images/sprits/sprit.svg#icon-user"></use>
+                            </svg>
+                            <p class="cabinet-group__desc">Увійти</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Унікальний вміст сайту -->
+    <main>
+
+        <!-- Розділ зворотній зв’язок -->
+        <section class="section-feedback">
+            <div class="container">
+
+                <!-- Форма -->
+                <form class="form-feedback section-feedback__form-feedback">
+
+                    <svg width="45%" height="100%">
+                        <use href="./images/sprits/sprit.svg#icon-form-feedback"></use>
+                    </svg>
+
+
+                    <div class="form-feedback__group">
+                        <h3 class="form-feedback__title">Зв‘яжіться з нами</h3>
+
+                        <ul class="list">
+
+                            <!-- Ім’я користувача -->
+                            <li class="form-feedback__item">
+                                <label class="form-feedback__wrapper">
+                                    <input class="form-feedback__input placeholder" type="text" type="text"
+                                        name="user-name" placeholder="Котенко Олександр" minlength="3" required>
+
+                                    <!-- Підпис -->
+                                    <span class="form-feedback__label">
+                                        Ім’я
+                                        <span class="form-feedback__decor">*</span>
+                                    </span>
+
+                                    <!-- Підказки -->
+                                    <span class="form-feedback__txt-error txt-error">Мінімальна довжина 3 символи</span>
+                                    <svg class="form-feedback__icons-error" width="15" height="15">
+                                        <use class="icon-attention" href="./images/sprits/sprit.svg#icon-attention">
+                                        </use>
+                                        <use class="icon-success" href="./images/sprits/sprit.svg#icon-success"></use>
+                                    </svg>
+                                </label>
+                            </li>
+
+                            <!-- Електронна пошта -->
+                            <li class="form-feedback__item">
+                                <label class="form-feedback__wrapper">
+                                    <input class="form-feedback__input placeholder" type="text" name="user-mail"
+                                        placeholder="kotenko@gmail.com" required>
+
+                                    <!-- Підпис -->
+                                    <span class="form-feedback__label">
+                                        Електронна пошта
+                                        <span class="form-feedback__decor">*</span>
+                                    </span>
+
+                                    <!-- Підказки -->
+                                    <span class="form-feedback__txt-error txt-error">Введіть електронну пошту у
+                                        вказаному
+                                        форматі</span>
+                                    <svg class="form-feedback__icons-error" width="15" height="15">
+                                        <use class="icon-attention" href="./images/sprits/sprit.svg#icon-attention">
+                                        </use>
+                                        <use class="icon-success" href="./images/sprits/sprit.svg#icon-success"></use>
+                                    </svg>
+                                </label>
+
+                            </li>
+
+                            <!-- Номер телефону -->
+                            <li class="form-feedback__item">
+                                <label class="form-feedback__wrapper">
+                                    <input class="form-feedback__input placeholder" type="text" name="user-phone"
+                                        placeholder="+38 (099) 123-45-67" required>
+
+                                    <!-- Підпис -->
+                                    <span class="form-feedback__label">
+                                        Телефон
+                                        <span class="form-feedback__decor">*</span>
+                                    </span>
+
+                                    <!-- Підказки -->
+                                    <span class="form-feedback__txt-error txt-error">Введіть телефон у вказаному
+                                        форматі</span>
+                                    <svg class="form-feedback__icons-error" width="15" height="15">
+                                        <use class="icon-attention" href="./images/sprits/sprit.svg#icon-attention">
+                                        </use>
+                                        <use class="icon-success" href="./images/sprits/sprit.svg#icon-success"></use>
+                                    </svg>
+                                </label>
+                            </li>
+
+                            <!-- Повідомлення -->
+                            <li class="form-feedback__item">
+                                <label class="form-feedback__wrapper">
+                                    <textarea class="form-feedback__textarea placeholder " type="text" name="user-sms"
+                                        placeholder="Ваше Повідомлення" required cols="30" rows="3"></textarea>
+
+                                    <!-- Підпис -->
+                                    <span class="form-feedback__label-textarea">
+                                        Повідомлення
+                                        <span class="form-feedback__decor">*</span>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <button class="form-feedback__btn" type="submit">Відправить</button>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Заключна чатсина сайту -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="site-footer__group">
+                <!-- Логотип -->
+                <a class="logo-link link" href="./index.html" rel="noopener noreferrer" aria-label="Логотип">
+                    <svg width="168" height="42">
+                        <use href="./images/sprits/sprit.svg#icon-logo-white"></use>
+                    </svg>
+                </a>
+
+                <!-- Навігація по сайту -->
+                <nav class="main-nav site-footer__main-nav">
+
+                    <ul class="main-nav__list list">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link main-nav__link--footer-mode link" href="./index.html">Головна</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link main-nav__link--footer-mode link" href="">Рецензування</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link main-nav__link--footer-mode link" href="./feedback.html">Зворотній
+                                зв’язок</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link main-nav__link--footer-mode link" href="">Про проект</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link main-nav__link--footer-mode link" href="">Політика
+                                конфіденційності</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Номер телефону -->
+                <div class="site-footer__wrapper">
+                    <a class="contact-link link" href="tel:+380999999999" target="_blank" rel="noopener noreferrer"
+                        aria-label="Номер телефону">
+                        + 38 (099) 999 99 99
+                    </a>
+                </div>
+            </div>
+
+            <p class="site-footer__desc">2021 &#169; All rights reserved</p>
+
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/animation-btn.js"></script>
+
+</body>
+
+</html>
